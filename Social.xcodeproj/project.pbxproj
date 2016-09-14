@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5169ECD11D89D174005F525C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169ECD01D89D174005F525C /* RoundTextField.swift */; };
+		5169ECD41D89D1FD005F525C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169ECD31D89D1FD005F525C /* Constants.swift */; };
+		5169ECD81D89D6CF005F525C /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169ECD71D89D6CF005F525C /* RoundBtn.swift */; };
 		51E88F1B1D8983FD00A4B1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E88F1A1D8983FD00A4B1D1 /* AppDelegate.swift */; };
 		51E88F1D1D8983FD00A4B1D1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E88F1C1D8983FD00A4B1D1 /* SignInVC.swift */; };
 		51E88F201D8983FD00A4B1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E88F1E1D8983FD00A4B1D1 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		1B217A6BF46774FE83F6A904 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
+		5169ECD01D89D174005F525C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		5169ECD31D89D1FD005F525C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5169ECD71D89D6CF005F525C /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		51E88F171D8983FD00A4B1D1 /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E88F1A1D8983FD00A4B1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51E88F1C1D8983FD00A4B1D1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -42,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5169ECD21D89D1E8005F525C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5169ECD31D89D1FD005F525C /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		51E88F0E1D8983FC00A4B1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +77,7 @@
 		51E88F191D8983FD00A4B1D1 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				5169ECD21D89D1E8005F525C /* Util */,
 				51E88F2E1D8987B500A4B1D1 /* Model */,
 				51E88F301D8987C000A4B1D1 /* Controller */,
 				51E88F2F1D8987BB00A4B1D1 /* View */,
@@ -86,6 +101,8 @@
 		51E88F2F1D8987BB00A4B1D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5169ECD01D89D174005F525C /* RoundTextField.swift */,
+				5169ECD71D89D6CF005F525C /* RoundBtn.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5169ECD11D89D174005F525C /* RoundTextField.swift in Sources */,
+				5169ECD81D89D6CF005F525C /* RoundBtn.swift in Sources */,
 				51E88F1D1D8983FD00A4B1D1 /* SignInVC.swift in Sources */,
 				51E88F1B1D8983FD00A4B1D1 /* AppDelegate.swift in Sources */,
+				5169ECD41D89D1FD005F525C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

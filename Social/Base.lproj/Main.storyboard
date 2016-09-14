@@ -71,6 +71,57 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVC-wL-2Jb" userLabel="Login">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-rW-uVF">
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-bR-oS4" customClass="RoundTextField" customModule="Social" customModuleProvider="target">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-dt-LHh" customClass="RoundTextField" customModule="Social" customModuleProvider="target">
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVO-uf-56u" customClass="RoundBtn" customModule="Social" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.97254901960784312" green="0.41960784313725491" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="t8S-RO-6RT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Sign in with email">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-yW-6E1" customClass="RoundBtn" customModule="Social" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.1691862593" green="0.32049622919999998" blue="0.53319546569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Connect with Facebook">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bkq-rW-uVF" firstAttribute="leading" secondItem="YVC-wL-2Jb" secondAttribute="leading" id="2rl-Y2-T69"/>
+                                    <constraint firstItem="bkq-rW-uVF" firstAttribute="top" secondItem="YVC-wL-2Jb" secondAttribute="top" id="7rN-ux-QyS"/>
+                                    <constraint firstAttribute="trailing" secondItem="bkq-rW-uVF" secondAttribute="trailing" id="8AO-S1-5js"/>
+                                    <constraint firstAttribute="width" constant="500" id="Cyl-ZS-osF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cyl-ZS-osF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Cyl-ZS-osF"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-kI-aVU" userLabel="Footer">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't sign in before, an account will be created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OLc-LK-shN">
@@ -100,57 +151,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVC-wL-2Jb" userLabel="Login">
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-rW-uVF">
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-bR-oS4">
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjX-dt-LHh">
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVO-uf-56u">
-                                                <color key="backgroundColor" red="0.97254901960784312" green="0.41960784313725491" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="t8S-RO-6RT"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Sign in with email">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-yW-6E1">
-                                                <color key="backgroundColor" red="0.1691862593" green="0.32049622919999998" blue="0.53319546569999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Connect with Facebook">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="bkq-rW-uVF" firstAttribute="leading" secondItem="YVC-wL-2Jb" secondAttribute="leading" id="2rl-Y2-T69"/>
-                                    <constraint firstItem="bkq-rW-uVF" firstAttribute="top" secondItem="YVC-wL-2Jb" secondAttribute="top" id="7rN-ux-QyS"/>
-                                    <constraint firstAttribute="trailing" secondItem="bkq-rW-uVF" secondAttribute="trailing" id="8AO-S1-5js"/>
-                                    <constraint firstAttribute="width" constant="500" id="Cyl-ZS-osF"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Cyl-ZS-osF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="Cyl-ZS-osF"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -160,7 +160,7 @@
                             <constraint firstItem="oU3-kI-aVU" firstAttribute="top" secondItem="YVC-wL-2Jb" secondAttribute="bottom" constant="8" id="IhC-uP-Dqo"/>
                             <constraint firstItem="oU3-kI-aVU" firstAttribute="top" secondItem="YVC-wL-2Jb" secondAttribute="bottom" constant="8" id="Ixi-ia-B81"/>
                             <constraint firstItem="YVC-wL-2Jb" firstAttribute="leading" secondItem="9JF-eX-HKb" secondAttribute="trailing" constant="8" id="OIR-do-HQi"/>
-                            <constraint firstItem="YVC-wL-2Jb" firstAttribute="top" secondItem="9JF-eX-HKb" secondAttribute="bottom" constant="8" id="QtR-55-ImW">
+                            <constraint firstItem="YVC-wL-2Jb" firstAttribute="top" secondItem="9JF-eX-HKb" secondAttribute="bottom" constant="20" id="QtR-55-ImW">
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9JF-eX-HKb" secondAttribute="bottom" id="QzU-AF-erj"/>

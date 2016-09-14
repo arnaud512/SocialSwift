@@ -1,0 +1,4 @@
+Social/GoogleService-Info.plist
+*.xcworkspace
+Podfile.lock
+Pods/

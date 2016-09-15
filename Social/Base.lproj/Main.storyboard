@@ -94,6 +94,9 @@
                                                 <state key="normal" title="Sign in with email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaT-Au-s0x"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nH-yW-6E1" customClass="RoundBtn" customModule="Social" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.1691862593" green="0.32049622919999998" blue="0.53319546569999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -220,6 +223,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="t4U-bR-oS4" id="KOG-PM-6A1"/>
+                        <outlet property="passwordField" destination="gjX-dt-LHh" id="cOL-6n-OZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,8 +13,29 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailField: RoundTextField!
+    @IBOutlet weak var passwordField: RoundTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func signInTapped(_ sender: UIButton) {
+        if let email = emailField.text, let pwd = passwordField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("::> User Email/password authenticate with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("::> Couldn't create user Email/password with Firebase - \(error)")
+                        } else {
+                            print("::> User Email/password created and authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
     }
     
     @IBAction func facebookButtonTapped(_ sender: UIButton) {

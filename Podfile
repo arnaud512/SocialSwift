@@ -6,5 +6,9 @@ target 'Social' do
   use_frameworks!
 
   # Pods for Social
-  pod 'Firebase', :inhibit_warnings => true
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'FBSDKLoginKit'
 end

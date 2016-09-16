@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -20,17 +21,29 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let uid = KeychainWrapper.defaultKeychainWrapper().stringForKey(KEY_UID) {
+            print("::> Retrieve uid from keychain")
+            performSegue(withIdentifier: "toFeedSegue", sender: nil)
+        }
+        
+    }
+    
     @IBAction func signInTapped(_ sender: UIButton) {
         if let email = emailField.text, let pwd = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("::> User Email/password authenticate with Firebase")
+                    self.completeSignIn(uid: user?.uid)
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("::> Couldn't create user Email/password with Firebase - \(error)")
                         } else {
                             print("::> User Email/password created and authenticated with Firebase")
+                            self.completeSignIn(uid: user?.uid)
                         }
                     })
                 }
@@ -59,8 +72,17 @@ class SignInVC: UIViewController {
                 print("::> Unable to authenticate with Firebase - \(error)")
             } else {
                 print("::> Successfully authenticated with Firebase")
+                self.completeSignIn(uid: user?.uid)
             }
         })
+    }
+    
+    func completeSignIn(uid: String?) {
+        if let uid = uid {
+            let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(uid, forKey: KEY_UID)
+            print("::> Keychain saved with result \(keychainResult)")
+            performSegue(withIdentifier: "toFeedSegue", sender: nil)
+        }
     }
 }
 

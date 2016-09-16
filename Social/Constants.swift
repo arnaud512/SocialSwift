@@ -9,3 +9,4 @@
 import UIKit
 
 let PRIMARY_COLOR = UIColor(red:0.984, green:0.502, blue:0.137, alpha:1)
+let KEY_UID = "uid"
